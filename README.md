@@ -30,7 +30,7 @@ Instructions for use:
     
   libs			("libSAHIncompressibleTurbulenceModel.so");
   
-3. In the constant/turbulenceProperties file of the case where you want to use the model, put:
+2. In the constant/turbulenceProperties file of the case where you want to use the model, put:
 
    simulationType          RAS;
    
