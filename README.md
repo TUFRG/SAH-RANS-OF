@@ -6,7 +6,7 @@ Turbomachinery and Unsteady Flows Research Group
 University of Windsor
 
 Implemented for the OpenFOAM .com branch
-Latest tested version: v2312
+Tested to work on both v2312 and v2406
 
 Compilation Instructions:
 1. Clone repository to a folder.
