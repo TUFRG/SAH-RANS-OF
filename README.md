@@ -16,20 +16,32 @@ Compilation Instructions:
 Compile libraries will be located in $FOAM_USER_LIBBIN
 
 Libraries:
+
 libSAHIncompressibleTurbulenceModel.so
+
 libSAHCompressibleTurbulenceModel.so
 
 Instructions for use:
 1. In the system/controlDict file of the case where you want to use the model, add the line:
+   
   libs			("libSAHCompressibleTurbulenceModel.so");
+  
     or
+    
   libs			("libSAHIncompressibleTurbulenceModel.so");
+  
 3. In the constant/turbulenceProperties file of the case where you want to use the model, put:
-   simulationType          RAS;
 
+   simulationType          RAS;
+   
     RAS
+   
     {
+   
       RASModel            SpalartAllmarasH; // H at the end for "helicity correction"
+   
       turbulence          on;
+   
       printCoeffs         on;
+   
     }
