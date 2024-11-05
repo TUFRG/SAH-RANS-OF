@@ -1,37 +1,37 @@
-# Spalart-Allmaras turbulence model with Liu et al.'s helicity correction
+# SAH-RANS-OF
+Spalart-Allmaras turbulence model with Liu et al.'s helicity correction. Originally implemented in OpenFOAM by Zhifan Yu, updated for more recent OpenFOAM versions by Jeff Defoe
+Developed by the Turbomachinery and Unsteady Flows Research Group, from the University of Windsor.
 
-Originally implemented in OpenFOAM by Zhifan Yu
-Updated for more recent OpenFOAM versions by Jeff Defoe
-Turbomachinery and Unsteady Flows Research Group
-University of Windsor
+## Target Platform
+This code is implemented for the OpenFOAM .com branch and is tested to work on both v2312 and v2406.
 
-Implemented for the OpenFOAM .com branch
-Tested to work on both v2312 and v2406
-
-Compilation Instructions:
+## Compilation Instructions
 1. Clone repository to a folder.
-2. Make the 'compileSAH.sh' Bash script executable (e.g. 'chmod +x compileSAH.sh')
-3. Execute the script to compile both incompressible and compressible versions of the model
+   
+3. Make the 'compileSAH.sh' Bash script executable (e.g. 'chmod +x compileSAH.sh')
+   
+5. Execute the script to compile both incompressible and compressible versions of the model
 
-Compile libraries will be located in $FOAM_USER_LIBBIN
+      Compile libraries will be located in $FOAM_USER_LIBBIN
 
-Libraries:
+      Libraries:
+      - libSAHIncompressibleTurbulenceModel.so
+      - libSAHCompressibleTurbulenceModel.so
 
-libSAHIncompressibleTurbulenceModel.so
-
-libSAHCompressibleTurbulenceModel.so
-
-Instructions for use:
+## Instructions For Use
 1. In the system/controlDict file of the case where you want to use the model, add the line:
    
-  libs			("libSAHCompressibleTurbulenceModel.so");
-  
-    or
-    
-  libs			("libSAHIncompressibleTurbulenceModel.so");
-  
+   ``` 
+   libs			("libSAHCompressibleTurbulenceModel.so");
+   ```
+   or
+   ```
+   libs			("libSAHIncompressibleTurbulenceModel.so");
+   ```
+     
 2. In the constant/turbulenceProperties file of the case where you want to use the model, put:
-
+   
+   ```
    simulationType          RAS;
    
     RAS
@@ -45,8 +45,8 @@ Instructions for use:
       printCoeffs         on;
    
     }
-
-CITING:
+   ```
+## Citing
 
 Please cite the following papers, which include the first implemenation and its validation:
 
