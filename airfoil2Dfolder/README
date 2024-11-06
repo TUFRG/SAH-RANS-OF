@@ -1,0 +1,2 @@
+Airfoil2D simpleFoam tutorial modified to use helicity-corrected Spalart-Allmaras turbulence model.
+Some modifications to system/fvSolution as well to accelerate convergence.
