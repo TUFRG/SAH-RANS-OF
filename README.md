@@ -9,9 +9,9 @@ This code is implemented for the OpenFOAM .com branch and is tested to work on b
 ## Compilation Instructions
 1. Clone repository to a folder.
    
-3. Make the 'compileSAH.sh' Bash script executable (e.g. 'chmod +x compileSAH.sh')
+3. Make the Allwmake script executable (e.g. 'chmod +x Allwmake')
    
-5. Execute the script to compile both incompressible and compressible versions of the model
+5. Run './Allwmake' to compile both incompressible and compressible versions of the model
 
       Compiled libraries will be located in $FOAM_USER_LIBBIN
 
