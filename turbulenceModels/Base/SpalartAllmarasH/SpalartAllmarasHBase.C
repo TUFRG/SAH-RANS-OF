@@ -162,7 +162,7 @@ tmp<volScalarField> SpalartAllmarasHBase<BasicEddyViscosityModel>::Stilda
         max
         (
         	// modified SAH expression
-            (1.0*0.71*pow(h,0.6))*Omega + fv2(chi, fv1)*nuTilda_/sqr(kappa_*dTilda),
+            (1.0+0.71*pow(h,0.6))*Omega + fv2(chi, fv1)*nuTilda_/sqr(kappa_*dTilda),
             Cs_*Omega
             // original:
 			// Omega + fv2(chi, fv1)*nuTilda_/sqr(kappa_*dTilda),
